@@ -1,0 +1,50 @@
+CREATE TABLE IF NOT EXISTS raw_trips(
+    vendorID INT NOT NULL,
+    trip_pickup_datetime TIMESTAMP,
+    trip_dropoff_datetime TIMESTAMP,
+    passenger_count FLOAT,
+    trip_distance FLOAT,
+    rateID FLOAT,
+    store_and_fwd VARCHAR(10),
+    meter_engage INT,
+    meter_disengage INT,
+    payment_type INT,
+    fare_amount FLOAT,
+    extra_chrg FLOAT,
+    metre_tax FLOAT,
+    tip_amt FLOAT,
+    toll_amt FLOAT,
+    imprvmt_surcharge FLOAT,
+    total_amt FLOAT,
+    congest_surcharge FLOAT,
+    airport_fee FLOAT,
+    cbd_congest_fee FLOAT
+);
+CREATE TABLE IF NOT EXISTS staging_data(
+    vendorID INT NOT NULL,
+    trip_pickup_datetime TIMESTAMP,
+    trip_dropoff_datetime TIMESTAMP,
+    passenger_count FLOAT,
+    trip_distance FLOAT,
+    rateID FLOAT,
+    store_and_fwd VARCHAR(10),
+    meter_engage INT,
+    meter_disengage INT,
+    payment_type INT,
+    fare_amount FLOAT,
+    extra_chrg FLOAT,
+    metre_tax FLOAT,
+    tip_amt FLOAT,
+    toll_amt FLOAT,
+    imprvmt_surcharge FLOAT,
+    total_amt FLOAT,
+    congest_surcharge FLOAT,
+    airport_fee FLOAT,
+    cbd_congest_fee FLOAT
+);
+CREATE TABLE IF NOT EXISTS load_batches(
+    file_name VARCHAR(100),
+    load_timestmp TIMESTAMP,
+    row_count INT,
+    batch_status VARCHAR(50) CHECK (batch_status IN ('in_progress','success','failure'))
+);

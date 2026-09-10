@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local configuration and secrets
+.env
+
+# Local datasets and generated runtime files
+data/*
+!data/.gitkeep
+airflow/logs/
+airflow/scheduler/
+airflow/dag_processor_manager/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
