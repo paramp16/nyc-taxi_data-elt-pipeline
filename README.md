@@ -1,4 +1,4 @@
-# NYC Taxi Data Pipeline
+# NYC Taxi Data Pipeline (Still in development)
 
 A small PostgreSQL loading pipeline for NYC taxi trip parquet files, with a local Airflow environment.
 Airflow is still in development...
